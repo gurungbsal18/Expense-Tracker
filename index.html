@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="expense-tracker-container">
+      <h3>Expense Tracker</h3>
+
+      <h4>Your Balance</h4>
+      <p class="your-amount">NPR 500</p>
+
+      <div class="income-expense-container">
+        <span>
+          <h4>Income</h4>
+          <p>NRS 300</p>
+        </span>
+        <span>
+          <h4>Expense</h4>
+          <p>NRS 200</p>
+        </span>
+      </div>
+
+      <h4>Total</h4>
+      <p>NRS 100</p>
+
+      <h4>Add Transaction</h4>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span>
+          <label for="">Source</label>
+          <br />
+          <input type="text" />
+        </span>
+        <span>
+          <label for="">Amount</label>
+          <br />
+          <input type="number" />
+        </span>
+        <button>Add</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.expense-tracker-container {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid #efefef;
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+
+.income-expense-container {
+  display: flex;
+  justify-content: space-between;
+}
