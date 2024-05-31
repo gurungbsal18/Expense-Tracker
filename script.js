@@ -19,7 +19,36 @@ function addTransaction (e) {
     if(text.value.trim() === '' || amount.value.trim() === '') {
         alert('Please enter required field')
     }
+
+    const transaction = {
+        id: generateId(),
+        text : text.value,
+        amount : +amount.value,
+    }
+
+    transcations.push(transaction)
+    addTransactionDOM(transaction)
+    updateValues()
+
+    text.value =''
+    amount.value= ''
 }
 
+function generateId() {
+    return Math.floor(Math.random() * 100)
+}
+
+function addTransactionDOM(transaction) {
+    const sign = transaction.amount < 0 ? '-' : '+'
+    const item = document.createElement('li')
+
+    item.classList.add(transaction.amount < 0 ? 'minus' : 'plus')
+    item.innerHTML = `
+    ${transaction.text} <span>${sign} ${Math.abs(transaction.amount)}</span>
+    <button class="delete-btn" onClick="removeTransaction(${transaction.id})">X</button>
+    `
+
+    list.appendChild(item)
+}
 
 form.addEventListener('submit', addTransaction)
