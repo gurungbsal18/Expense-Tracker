@@ -11,36 +11,43 @@
       <h3>Expense Tracker</h3>
 
       <h4>Your Balance</h4>
-      <p class="your-amount">NPR 500</p>
+      <p id="balance">500</p>
 
-      <div class="income-expense-container">
-        <span>
+      <div class="expense-container">
+        <div>
           <h4>Income</h4>
-          <p>NRS 300</p>
-        </span>
-        <span>
+          <p id="money-plus" class="money-plus">+ 300</p>
+        </div>
+        <div>
           <h4>Expense</h4>
-          <p>NRS 200</p>
-        </span>
+          <p id="money-minus" class="money-minus">NRS 200</p>
+        </div>
       </div>
 
-      <h4>Total</h4>
-      <p>NRS 100</p>
+      <h4>Histort</h4>
+      <ul id="list" class="lists">
+        <li class="minus">
+          Cash <span>-400</span>
+          <button class="delete-btn">X</button>
+        </li>
+      </ul>
 
       <h4>Add Transaction</h4>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <span>
-          <label for="">Source</label>
-          <br />
-          <input type="text" />
-        </span>
-        <span>
-          <label for="">Amount</label>
-          <br />
-          <input type="number" />
-        </span>
-        <button>Add</button>
-      </div>
+
+      <form action="" id="form">
+        <div class="form-control">
+          <label for="text">Text</label>
+          <input type="text" id="text" placeholder="Enter transaction">
+        </div>
+
+        <div class="form-control">
+          <label for="amoount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter amount">
+        </div>
+        <button type="submit">Add Transaction</button>
+      </form>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
